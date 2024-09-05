@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://i.pinimg.com/originals/f0/68/13/f0681379701f69955d93b757903497ae.jpg);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.slider-container {
+    overflow: hidden;
+    height: 500px; /* Increased height to fit larger images */
+    width: auto;   /* Auto width to fit the slider */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    align-items: center; /* Center vertically within the container */
+}
+
+.slide {
+    margin: 0 15px; /* Increased space between boxes */
+    border: 2px solid #fff; /* Border around each image */
+    padding: 10px; /* Increased padding for more space */
+    background-color: #333; /* Background color inside the box */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Increased width */
+    height: 400px; /* Increased height */
+}
+
+.slide img {
+    display: block;
+    height: 100%; /* Full height of the slide */
+    width: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.2);
+}
